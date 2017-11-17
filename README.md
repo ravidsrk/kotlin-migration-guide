@@ -319,7 +319,7 @@ fun getUserName(): String {
 
 ---
 
-## Power of Kotlin-Extensions
+## Utils -> Kotlin-Extensions
 
 ---
 
@@ -330,6 +330,7 @@ fun getUserName(): String {
 ## Acknowledgement 
 
 [**Arun Sasidharan**](https://github.com/esoxjem) for Initial Idea
+[**Ritesh Gupta**](https://github.com/riteshhgupta) for More Ideas
 
 
 
