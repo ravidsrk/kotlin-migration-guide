@@ -79,6 +79,8 @@ kapt com.android.databinding:compiler:3.0.0
 * No argument captor.
 * **git diff** If two developers are working on same java file and one guy converts it to Kotlin, it will be rework.
 
+---
+
 ### `TypeCasting` for the sake of `Interoperability`
 
 Kotlin is not Interoperable right away, but you need to do a lot of work around to make it Interoperable
