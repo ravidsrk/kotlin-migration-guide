@@ -13,7 +13,12 @@ Once you learn basics syntax of **Kotlin**
 
 ---
 
+
 ## Comparing the type system between Java and Kotlin
+
+---
+
+### `Any` v/s `Object`
 
 ---
 
@@ -30,6 +35,10 @@ Once you learn basics syntax of **Kotlin**
 ---
 
 ## How `data` classes are based on Value Types
+
+---
+
+### `class` v/s `data-class`
 
 ---
 
@@ -276,7 +285,7 @@ fun uploadClicked() {
 
 ---
 
-### Use `Elivis` operator
+### Use `elvis` operator
 
 Elvis operator is great when you have a fallback value for the null case. So you can replace this:
 
@@ -292,7 +301,7 @@ fun getUserName(): String {
 
 ----
 
-Elvis operator is great when you have a fallback value for the null case. So you can replace this:
+**elvis** operator is great when you have a fallback value for the null case. So you can replace this:
 
 ```kotlin
 fun getUserName(): String {
@@ -327,6 +336,5 @@ fun getUserName(): String {
 ---
 
 ## References
-
 
 ---
