@@ -1,4 +1,5 @@
 # Kotlin Migration Guide
+
 >  Practical Tips to migrate your Android App to Kotlin
 
 ## Steps to **Convert**
@@ -20,19 +21,19 @@ Once you learn basics syntax of **Kotlin**
 
 ---
 
-## What nullability means in Kotlin?
+## What `nullability` means in Kotlin?
 
 ---
 
-## Why Optionals exist?
+## Why `Optionals` exist?
 
 ---
 
-## How data classes are based on Value Types
+## How `data` classes are based on Value Types
 
 ---
 
-## Removing ButterKnife to use Kotlin-Extensions
+## Removing `ButterKnife` to use `Kotlin-Extensions`
 
 ---
 
@@ -49,15 +50,15 @@ kapt com.android.databinding:compiler:3.0.0
 * `@JvmField` to rescue while using ButterKnife `@InjectView` and Espresso `@Rule`
 
 ---
-### **annotationProcessor** must be replaced by **kapt** in build.gradle
+### `annotationProcessor` must be replaced by `kapt` in build.gradle
 
 ---
 
-### Configure tests to mock final classes
+### Configure tests to mock `final` classes
 
 ---
 
-### If you are using android **data-binding**, include:
+### If you are using android `data-binding`, include:
 
 ```groovy
 kapt com.android.databinding:compiler:3.0.0
@@ -74,11 +75,11 @@ kapt com.android.databinding:compiler:3.0.0
 * TypeCasting for the sake of Interoperability.
 * **Companion** will add extra layer.
 * If java method starting with getX(), converter looks for property with the name X.
-* **Generics** are hard to get it right on the first go.
+* **Generics** is hard to get it right on the first go.
 * No argument captor.
 * **git diff** If two developers are working on same java file and one guy converts it to Kotlin, it will be rework.
 
-### **TypeCasting** for the sake of **Interoperability**
+### `TypeCasting` for the sake of `Interoperability`
 
 Kotlin is not Interoperable right away, but you need to do a lot of work around to make it Interoperable
 
@@ -108,7 +109,7 @@ mainView?.displayMessageFromApi(demoResponse.message as String)
 
 ---
 
-### **Companion** will add extra layer
+### `Companion` will add extra layer
 
 Here is **Java** class:
 
@@ -152,7 +153,7 @@ public class MainActivity extends BaseActivity implements MainMvpView {
 
 ---
 
-### Method names starting with **get**
+### Method names starting with `get`
 
 Here is the Java class:
 
@@ -184,7 +185,7 @@ Expecting methods **demoResponse** and **demoResponse2**, They are being interpr
 
 ---
 
-## Eliminating !! from your Kotlin code
+## Eliminating `!!` from your Kotlin code
 
 * Use **val** instead of **var**
 * Use **lateinit**
@@ -193,7 +194,7 @@ Expecting methods **demoResponse** and **demoResponse2**, They are being interpr
 
 ---
 
-### Use **val** instead of **var**
+### Use `val` instead of `var`
 
 * Kotlin makes you think about immutability on the language level and that’s great.
 * **var** and **val** mean **"writable"** and **"read-only"**
@@ -201,7 +202,20 @@ Expecting methods **demoResponse** and **demoResponse2**, They are being interpr
 
 ---
 
-### Use **lateinit**
+### No `ArgumentCaptor`
+
+If you are using Mockito’s ArgumentCaptor, you will most probably get following error
+
+```
+java.lang.IllegalStateException: classCaptor.capture() must not be null
+```
+
+The return value of **classCaptor.capture()** is null, but the signature of **SomeClass#someMethod(Class, Boolean)** does not allow a *null* argument.
+
+---
+
+
+### Use `lateinit`
 
 ```kotlin
 private var adapter: RecyclerAdapter<Droids>? = null
@@ -235,7 +249,7 @@ fun updateTransactions() {
 
 ---
 
-### Use **let** function
+### Use `let` function
 
 ```kotlin
 private var photoUrl: String? = null
@@ -253,14 +267,14 @@ fun uploadClicked() {
 private var photoUrl: String? = null
 
 fun uploadClicked() {
-	photoUrl?.let { uploadPhoto(it) }
+    photoUrl?.let { uploadPhoto(it) }
 }
 
 ```
 
 ---
 
-### Use **Elivis** operator
+### Use `Elivis` operator
 
 Elvis operator is great when you have a fallback value for the null case. So you can replace this:
 
@@ -290,17 +304,7 @@ fun getUserName(): String {
 
 ---
 
-## Migrating Unit Tests to Use Mockito-Kotlin
-
-### No **ArgumentCaptor**
-
-If you are using Mockito’s ArgumentCaptor you will most probably get following error
-
-```
-java.lang.IllegalStateException: classCaptor.capture() must not be null
-```
-
-The return value of **classCaptor.capture()** is null, but the signature of **SomeClass#someMethod(Class, Boolean)** does not allow a *null* argument.
+## Migrating Unit Tests to Use `Mockito-Kotlin`
 
 ---
 
@@ -321,3 +325,6 @@ The return value of **classCaptor.capture()** is null, but the signature of **So
 ---
 
 ## References
+
+
+---
