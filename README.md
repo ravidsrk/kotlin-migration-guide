@@ -4,6 +4,8 @@
 
 ---
 
+## Contents
+
 - [Configure Kotlin](#configure-kotlin)
 - [Steps to **Convert**](#steps-to-convert)
 - [Comparing the type system between `Java` and `Kotlin`](#comparing-the-type-system-between-java-and-kotlin)
@@ -33,7 +35,7 @@
   - [Use `let` function](#use-let-function)
   - [Use `elvis` operator](#use-elvis-operator)
 - [Annotations to make Kotlin interoperable with Java.](#annotations-to-make-kotlin-interoperable-with-java)
-- [Migrating Unit Tests to Use [`Mockito-Kotlin`](#migrating-unit-tests-to-use-mockito-kotlin)
+- [Migrating Unit Tests to Use `Mockito-Kotlin`](#migrating-unit-tests-to-use-mockito-kotlin)
 - [Utils -> Kotlin-Extensions](#utils---kotlin-extensions)
 - [Migrating Room to Kotlin](#migrating-room-to-kotlin)
 - [Idiomatic Kotlin](#idiomatic-kotlin)
