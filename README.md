@@ -121,9 +121,7 @@ Here is the **Java** class:
 
 ```java
 public class DemoFragment extends BaseFragment implements DemoView {
-  
-    @Override
-    public void displayMessageFromApi(String apiMessage) {
+    @Override public void displayMessageFromApi(String apiMessage) {
       ...
     }
 }
@@ -220,6 +218,7 @@ Expecting methods **demoResponse** and **demoResponse2**, They are being interpr
 ---
 
 ## Eliminating `!!` from your Kotlin code
+[Source](https://android.jlelse.eu/how-to-remove-all-from-your-kotlin-code-87dc2c9767fb)
 
 * Use **val** instead of **var**
 * Use **lateinit**
@@ -346,6 +345,9 @@ fun getUserName(): String {
 
 ---
 
+## Migrating Room to Kotlin
+
+---
 
 ## Idiomatic Kotlin
 
@@ -357,10 +359,13 @@ fun getUserName(): String {
 
 [**Ritesh Gupta**](https://github.com/riteshhgupta) for More Ideas
 
-
-
 ---
 
 ## References
+
+https://medium.com/fueled-android/practical-tips-to-migrate-your-android-app-to-kotlin-4d331e5256dc
+https://codelabs.developers.google.com/codelabs/taking-advantage-of-kotlin/index.html
+https://android.jlelse.eu/how-to-remove-all-from-your-kotlin-code-87dc2c9767fb
+https://medium.com/google-developers/migrating-an-android-project-to-kotlin-f93ecaa329b7
 
 ---
