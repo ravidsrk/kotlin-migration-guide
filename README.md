@@ -2,6 +2,17 @@
 
 >  Practical Tips to migrate your Android App to Kotlin
 
+---
+
+## Configure Kotlin
+
+1. In Android Studio, select **Tools > Kotlin > Configure Kotlin in Project**. If a window titled **Choose Configurator**appears, select **Android with Gradle**, make sure **All modules** is selected, and click **OK**.
+2. You will be prompted to sync the project with Gradle as the build.gradle files have changed. Once the sync is complete, move to the next step and write some Kotlin code.
+
+**Note**: When using Android Studio 3.0 or higher and creating a new project, you can have Kotlin configured by default by selecting the **Include Kotlin support** checkbox on the Create Android Project dialog.
+
+---
+
 ## Steps to **Convert**
 
 Once you learn basics syntax of **Kotlin**
@@ -42,7 +53,19 @@ Once you learn basics syntax of **Kotlin**
 
 ---
 
-## Removing `ButterKnife` to use `Kotlin-Extensions`
+## Using `Parcelize` annotation for Parcellable
+
+---
+
+## String templates
+
+---
+
+## Removing `ButterKnife` and `findViewById` to use `Kotlin-Android-Extensions`
+
+---
+
+## `apply`, `let`, `with` and `also`
 
 ---
 
@@ -311,17 +334,18 @@ fun getUserName(): String {
 
 ---
 
-## Annotations to make Kotlin code interoperable with Java.
+## Annotations to make Kotlin interoperable with Java.
 
 ---
 
-## Migrating Unit Tests to Use `Mockito-Kotlin`
+## Migrating Unit Tests to Use [`Mockito-Kotlin`](https://github.com/nhaarman/mockito-kotlin)
 
 ---
 
 ## Utils -> Kotlin-Extensions
 
 ---
+
 
 ## Idiomatic Kotlin
 
@@ -330,6 +354,7 @@ fun getUserName(): String {
 ## Acknowledgement 
 
 [**Arun Sasidharan**](https://github.com/esoxjem) for Initial Idea
+
 [**Ritesh Gupta**](https://github.com/riteshhgupta) for More Ideas
 
 
