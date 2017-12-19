@@ -243,40 +243,20 @@ Kotlin has string templates, which is awesome. e.g. "$firstName $lastName" for s
 
 * **annotationProcessor** must be replaced by **kapt** in build.gradle
 * Configure tests to mock final classes
-* If you are using android **data-binding**, include:
-
-```groovy
-kapt com.android.databinding:compiler:3.0.0
-```
-
 * `@JvmField` to rescue while using ButterKnife `@InjectView` and Espresso `@Rule`
 
 ---
-### `annotationProcessor` must be replaced by `kapt` in build.gradle
 
-
-
----
-
-### Configure tests to mock `final` classes
-
-
-
----
-
-### If you are using android `data-binding`, include:
-
-
+## If you are using android **data-binding**, include:
 
 ```groovy
-kapt com.android.databinding:compiler:3.0.0
+kapt "com.android.databinding:compiler:${compiler_version}"
 ```
 
----
-
-### `@JvmField` to rescue while using ButterKnife `@InjectView` and Espresso `@Rule`
-
-
+Fixes following the Gradle warning:
+```
+Warning:warning: The following options were not recognized by any processor: '[android.databinding.artifactType, android.databinding.printEncodedErrors, android.databinding.minApi, android.databinding.isTestVariant, android.databinding.enableDebugLogs, android.databinding.sdkDir, android.databinding.bindingBuildFolder, android.databinding.enableForTests, android.databinding.modulePackage, kapt.kotlin.generated, android.databinding.generationalFileOutDir, android.databinding.xmlOutDir]'
+```
 
 ---
 
