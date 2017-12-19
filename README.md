@@ -255,7 +255,11 @@ kapt "com.android.databinding:compiler:${compiler_version}"
 
 Fixes following the Gradle warning:
 ```
-Warning:warning: The following options were not recognized by any processor: '[android.databinding.artifactType, android.databinding.printEncodedErrors, android.databinding.minApi, android.databinding.isTestVariant, android.databinding.enableDebugLogs, android.databinding.sdkDir, android.databinding.bindingBuildFolder, android.databinding.enableForTests, android.databinding.modulePackage, kapt.kotlin.generated, android.databinding.generationalFileOutDir, android.databinding.xmlOutDir]'
+Warning:warning: The following options were not recognized by any processor: '[android.databinding.artifactType,
+android.databinding.printEncodedErrors, android.databinding.minApi, android.databinding.isTestVariant,
+android.databinding.enableDebugLogs, android.databinding.sdkDir, android.databinding.bindingBuildFolder,
+android.databinding.enableForTests, android.databinding.modulePackage, kapt.kotlin.generated, 
+android.databinding.generationalFileOutDir, android.databinding.xmlOutDir]'
 ```
 
 ---
